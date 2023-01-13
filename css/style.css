@@ -1,0 +1,52 @@
+:root {
+  --primary-color: rgb(158, 122, 246);
+  --secondary-color: rgb(163, 255, 230);
+  --primary-op-color: rgb(158, 122, 246, 0.4);
+  --secondary-op-color: rgb(163, 255, 230, 0.4);
+  --font-color: rgb(49, 49, 49);
+}
+
+body {
+  color: var(--font-color);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-bg {
+  background-color: transparent;
+}
+
+.navbar-container {
+  margin: 20px 55px 0;
+}
+
+.navbar-brand {
+  color: var(--primary-color);
+  font-size: 25px;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: var(--secondary-color);
+}
+
+.navbar-nav {
+  font-size: 18px;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
