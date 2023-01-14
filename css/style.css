@@ -3,12 +3,13 @@
   --secondary-color: rgb(163, 255, 230);
   --primary-op-color: rgb(158, 122, 246, 0.4);
   --secondary-op-color: rgb(163, 255, 230, 0.4);
-  --font-color: rgb(49, 49, 49);
+  --main-font-color: rgb(49, 49, 49);
+  --sub-font-color: rgb(107, 107, 107);
 }
 
 body {
-  color: var(--font-color);
   font-family: "Poppins", sans-serif;
+  line-height: 1.5;
 }
 
 /* ---------- Navbar ---------- */
@@ -42,6 +43,66 @@ body {
 
 .nav-link:hover {
   color: var(--primary-color);
+}
+
+/* ---------- Home Header ---------- */
+.home-header-container {
+  margin: 30px 67px;
+}
+
+.home-h1 {
+  color: var(--main-font-color);
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.h1-important {
+  color: var(--primary-color);
+}
+
+.home-h2 {
+  color: var(--sub-font-color);
+  font-weight: 400;
+}
+
+.filled-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.filled-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.filled-btn:active {
+  color: var(--primary-color) !important;
+}
+
+.bordered-btn {
+  color: var(--primary-color);
+}
+
+.bordered-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.bordered-btn:active {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.filled-btn,
+.bordered-btn {
+  border: 1px solid var(--primary-color) !important;
+  border-radius: 40px 5px;
+  font-size: 22px;
+  padding: 15px 40px;
+}
+
+.btn-text {
+  width: 130px;
 }
 
 /* ---------- Responsive ---------- */
