@@ -60,7 +60,7 @@ body {
 }
 
 .margin-b {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 /* ---------- Navbar ---------- */
@@ -131,13 +131,13 @@ body {
   justify-content: center;
 }
 
-.home-main-header {
+.home-main-heading {
   color: var(--main-font-color);
   font-size: 64px;
   font-weight: 700;
 }
 
-.home-sub-header {
+.home-sub-heading {
   color: var(--sub-font-color);
   font-weight: 400;
 }
@@ -148,13 +148,13 @@ body {
 }
 
 /* ---------- Choose Header ---------- */
-.choose-main-header {
+.choose-main-heading {
   color: var(--main-font-color);
   font-size: 46px;
   font-weight: 600;
 }
 
-.choose-sub-header {
+.choose-sub-heading {
   color: var(--sub-font-color);
   font-size: 27px;
   font-weight: 400;
@@ -162,7 +162,7 @@ body {
 
 /* ---------- Choose Content ---------- */
 .choose-img-container {
-  height: 800px;
+  height: 700px;
   width: 90%;
 }
 
@@ -230,6 +230,49 @@ body {
   content: "0" counter(count);
 }
 
+/* ---------- Footer Notes ---------- */
+.inquiry-container {
+  background-color: var(--secondary-op-color);
+  border-radius: 150px;
+  margin: 0 80px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.inquiry-main-heading {
+  color: var(--main-font-color);
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.inquiry-sub-heading {
+  color: var(--sub-font-color);
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.footer-container {
+  font-size: 30px;
+  margin: 0 80px;
+  text-align: center;
+}
+
+.footer-line {
+  border-top: 5px solid;
+  color: var(--main-font-color);
+  opacity: 0.1;
+}
+
+.main-logo {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.footer-link {
+  color: var(--primary-color);
+  margin: auto 3px;
+}
+
 /* ---------- Responsive ---------- */
 @media (width >= 768px) {
   .navbar-expand-md .navbar-nav .nav-link {
@@ -242,10 +285,10 @@ body {
 }
 
 @media (width < 575px), (768px <= width <= 1024px) {
-  .home-main-header {
+  .home-main-heading {
     font-size: 48px;
   }
-  .home-sub-header {
+  .home-sub-heading {
     font-size: 22px;
   }
   .home-header-container .filled-btn,
@@ -261,10 +304,10 @@ body {
     font-size: 17px;
     width: 110px;
   }
-  .choose-main-header {
+  .choose-main-heading {
     font-size: 35px;
   }
-  .choose-sub-header {
+  .choose-sub-heading {
     font-size: 21px;
   }
   .choose-list {
