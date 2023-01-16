@@ -39,14 +39,14 @@ body {
 }
 
 .filled-btn,
-.bordered-btn:active {
-  background-color: var(--primary-color) !important;
-  color: white !important;
+.btn.bordered-btn:active {
+  background-color: var(--primary-color);
+  color: white;
 }
 
 .bordered-btn,
-.filled-btn:active {
-  color: var(--primary-color) !important;
+.btn.filled-btn:active {
+  color: var(--primary-color);
 }
 
 .filled-btn:hover,
@@ -60,7 +60,7 @@ body {
 }
 
 .margin-b {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 /* ---------- Navbar ---------- */
@@ -102,7 +102,7 @@ body {
 
 /* ---------- Home Header ---------- */
 .home-header-container {
-  margin: 0 67px;
+  margin: 0 65px;
 }
 
 .home-t-des,
@@ -115,7 +115,7 @@ body {
   top: -60%;
 }
 
-.home-img {
+.home-header-img {
   display: block;
   margin: 0 auto;
   object-fit: scale-down;
@@ -123,6 +123,12 @@ body {
   top: -30%;
   z-index: 1;
   width: 85%;
+}
+
+.header-content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home-main-header {
@@ -138,7 +144,7 @@ body {
 
 /* ---------- Why Choose Me ---------- */
 .choose-container {
-  margin: 0 90px;
+  margin: 0 80px;
 }
 
 /* ---------- Choose Header ---------- */
@@ -150,25 +156,25 @@ body {
 
 .choose-sub-header {
   color: var(--sub-font-color);
-  font-weight: 400;
   font-size: 27px;
+  font-weight: 400;
 }
 
 /* ---------- Choose Content ---------- */
 .choose-img-container {
-  width: 100%;
-  height: 580px;
+  height: 800px;
+  width: 90%;
 }
 
 .choose-img {
-  border-radius: 10px 240px 10px 10px;
+  background-image: url(/media/recent-project.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 240px;
   box-shadow: 0px 0px 17px 10px rgb(0 0 0 / 20%);
+  height: 100%;
   opacity: 0.7;
   transition: all 200ms ease-in-out;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
 }
 
 .choose-img:hover {
@@ -178,13 +184,14 @@ body {
 
 .choose-list-col {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
 
 .choose-list {
   font-size: 23px;
   list-style: none;
+  padding-left: 40px;
 }
 
 .choose-list li {
@@ -193,31 +200,34 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 70px;
-  padding-left: 50px;
+  text-align: start;
 }
 
 .choose-list li::before {
   background-color: var(--secondary-color);
   border-radius: 5px 50%;
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
   color: var(--main-font-color);
-  content: "0" counter(count);
+  content: counter(count);
   display: inline-flex;
+  flex-direction: column-reverse;
   font-size: 58px;
   font-weight: 600;
   margin-right: 20px;
   padding-left: 32px;
   padding-bottom: 15px;
-  text-align: center;
-  height: 70px;
-  width: 70px;
-  flex-direction: column-reverse;
-  justify-content: flex-start;
   position: relative;
   left: -40px;
+  height: 70px;
+  width: 70px;
 }
 
-.choose-list li:nth-child(2):before {
+.choose-list li:nth-child(even):before {
   background-color: var(--primary-color);
+}
+
+.choose-list li:nth-child(-n + 9):before {
+  content: "0" counter(count);
 }
 
 /* ---------- Responsive ---------- */
@@ -276,5 +286,8 @@ body {
   .home-header-container,
   .choose-container {
     text-align: center;
+  }
+  .choose-img-container {
+    margin: 0 auto;
   }
 }
