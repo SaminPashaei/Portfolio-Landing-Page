@@ -172,8 +172,8 @@ body {
 /* ---------- About Header ---------- */
 .about-t-des {
   margin: 0 0 0 auto;
-  transform: scaleX(-1);                                                                                    
-}                                                                                 
+  transform: scaleX(-1);
+}
 
 .about-b-des {
   position: relative;
@@ -340,6 +340,9 @@ body {
   }
   .navbar-nav {
     font-size: 15px;
+  }
+  .navbar-nav .nav-link.active::after {
+    content: none;
   }
   .main-container {
     text-align: center;
