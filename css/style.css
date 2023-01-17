@@ -14,7 +14,7 @@ body {
 }
 
 .main-container {
-  margin: 0 70px;
+  margin: 0 60px;
 }
 
 .content-container {
@@ -51,6 +51,7 @@ body {
   border: 1px solid var(--primary-color) !important;
   border-radius: 40px 5px;
   font-size: 22px;
+  margin: 6px;
   padding: 15px 35px;
 }
 
@@ -172,7 +173,7 @@ body {
 
 /* ---------- Choose Content ---------- */
 .choose-img-container {
-  height: 700px;
+  height: 600px;
   width: 90%;
 }
 
@@ -250,6 +251,7 @@ body {
 
 /* ---------- Footer ---------- */
 .footer-line {
+  border-radius: 10px;
   border-top: 5px solid;
   opacity: 0.1;
 }
@@ -291,14 +293,11 @@ body {
   }
   .filled-btn,
   .bordered-btn {
-    padding: 12px 17px;
+    padding: 13px 30px;
   }
   .btn-txt {
     font-size: 17px;
     width: 110px;
-  }
-  .header-content-col .filled-btn {
-    margin-right: 5px !important;
   }
   .content-container {
     margin: 0;
@@ -311,6 +310,13 @@ body {
   }
   .choose-list {
     font-size: 18px;
+  }
+  .choose-list li::before {
+    font-size: 45px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    height: 55px;
+    width: 55px;
   }
 }
 
@@ -330,5 +336,9 @@ body {
   }
   .choose-img-container {
     margin: 0 auto;
+  }
+  .footer-logo,
+  .footer-link {
+    font-size: 25px;
   }
 }
