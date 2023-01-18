@@ -26,7 +26,6 @@ body {
 
 .header-des {
   border-radius: 150px 10px 5px;
-  opacity: 0.4;
   height: 35%;
   width: 35%;
 }
@@ -35,7 +34,14 @@ body {
 .home-b-des,
 .about-t-des,
 .about-b-des {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-op-color);
+}
+
+.project-t-des,
+.project-b-des,
+.contact-t-des,
+.contact-b-des {
+  background-color: var(--primary-op-color);
 }
 
 .header-img {
@@ -181,6 +187,14 @@ body {
   position: relative;
   top: -60%;
   transform: scaleX(-1) rotate(180deg);
+}
+
+/* ---------- Project Header ---------- */
+.project-b-des {
+  margin: 0 0 10% auto;
+  position: relative;
+  top: -60%;
+  transform: rotate(180deg);
 }
 
 /* ---------- Choose Content ---------- */
