@@ -1,4 +1,4 @@
-function setEqualHeight() {
+function setAchieveHeight() {
   let achieveCard = document.querySelectorAll(".achieve-card");
 
   for (let index = 0; index < achieveCard.length; index++) {
@@ -32,5 +32,6 @@ function setEqualHeight() {
   }
 }
 
-setEqualHeight();
-window.onresize = setEqualHeight;
+setAchieveHeight();
+window.onresize = setAchieveHeight;
+
