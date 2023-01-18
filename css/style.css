@@ -1,19 +1,18 @@
 :root {
   --primary-color: rgb(158, 122, 246);
   --secondary-color: rgb(163, 255, 230);
-  --primary-op-color: rgb(158, 122, 246, 0.4);
+  --primary-op-color: rgb(158, 122, 246, 0.25);
   --secondary-op-color: rgb(163, 255, 230, 0.4);
   --main-font-color: rgb(49, 49, 49);
   --sub-font-color: rgb(107, 107, 107);
 }
 
 body {
-  color: var(--main-font-color);
   font-family: "Poppins", sans-serif;
-  line-height: 1.5;
 }
 
 .main-container {
+  color: var(--main-font-color);
   margin: 0 60px;
 }
 
@@ -96,11 +95,13 @@ body {
   color: var(--sub-font-color);
   font-size: 27px;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 /* ---------- Navbar ---------- */
-.navbar-bg {
+.navbar-color {
   background-color: transparent;
+  color: var(--main-font-color);
 }
 
 .navbar-container {
@@ -167,6 +168,7 @@ body {
 .page-sub-heading {
   color: var(--sub-font-color);
   font-weight: 400;
+  line-height: 1.5;
 }
 
 /* ---------- About Header ---------- */
@@ -249,6 +251,35 @@ body {
 
 .choose-list li:nth-child(-n + 9):before {
   content: "0" counter(count);
+}
+
+/* ---------- Achievements Content ---------- */
+.achieve-card {
+  background-color: var(--primary-op-color);
+  text-align: center;
+  border-radius: 10px;
+  height: 600px;
+}
+
+.achieve-logo-container {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.achieve-logo {
+  width: 80%;
+}
+
+.achieve-year {
+  color: var(--sub-font-color);
+}
+
+.achieve-txt {
+  font-size: 28px;
+  line-height: 1.5;
 }
 
 /* ---------- Work Inquiry ---------- */
