@@ -189,7 +189,7 @@ body {
   transform: scaleX(-1) rotate(180deg);
 }
 
-/* ---------- Project Header ---------- */
+/* ---------- Projects Header ---------- */
 .project-b-des {
   margin: 0 0 10% auto;
   position: relative;
@@ -300,6 +300,16 @@ body {
   text-align: center;
   margin-bottom: 0;
   font-size: 22px;
+}
+
+/* ---------- Projects Content ---------- */
+.git-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.git-link:hover {
+  color: var(--secondary-color);
 }
 
 /* ---------- Work Inquiry ---------- */
