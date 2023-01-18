@@ -291,8 +291,8 @@ body {
 /* ---------- Work Inquiry ---------- */
 .inquiry-container {
   background-color: var(--secondary-op-color);
-  border-radius: 100px;
-  padding: 50px 10px;
+  border-radius: 10px 10px 150px 150px;
+  padding: 50px 30px;
   text-align: center;
 }
 
