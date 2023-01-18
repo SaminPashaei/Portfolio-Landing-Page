@@ -21,7 +21,7 @@ body {
 }
 
 .margin-b {
-  margin-bottom: 6rem;
+  margin-bottom: 6rem !important;
 }
 
 .header-des {
