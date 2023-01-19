@@ -24,11 +24,12 @@ body {
   margin-bottom: 6rem !important;
 }
 
-.header-des {
+/* .header-des {
   border-radius: 150px 10px 5px;
-  height: 35%;
   width: 35%;
-}
+  height: 0;
+  padding-top: 35%;
+} */
 
 .home-t-des,
 .home-b-des,
@@ -44,15 +45,15 @@ body {
   background-color: var(--primary-op-color);
 }
 
-.header-img {
+/* .header-img {
   display: block;
   margin: 0 auto;
   object-fit: scale-down;
   position: relative;
-  top: -30%;
+  top: -18%;
   z-index: 1;
   width: 85%;
-}
+} */
 
 .important-heading-1 {
   color: var(--primary-color);
@@ -168,7 +169,7 @@ body {
 .home-b-des {
   margin: 0 0 10% auto;
   position: relative;
-  top: -60%;
+  top: -35%;
   transform: rotate(180deg);
 }
 
@@ -186,7 +187,7 @@ body {
 
 .about-b-des {
   position: relative;
-  top: -60%;
+  top: -35%;
   transform: scaleX(-1) rotate(180deg);
 }
 
@@ -194,9 +195,22 @@ body {
 .project-b-des {
   margin: 0 0 10% auto;
   position: relative;
-  top: -60%;
+  top: -35%;
   transform: rotate(180deg);
 }
+
+/* ---------- About Header ---------- */
+/* .contact-t-des {
+  margin: 0 0 0 auto;
+  transform: scaleX(-1);
+}
+
+.contact-b-des {
+  position: relative;
+  top: -20%;
+  transform: scaleX(-1) rotate(180deg);
+  margin: -20%;
+} */
 
 /* ---------- Choose Content ---------- */
 .choose-img-container {
@@ -361,6 +375,45 @@ body {
   color: white;
   position: relative;
   top: -200px;
+}
+
+/* ---------- Contact Content ---------- */
+.header-img {
+  display: block;
+  margin: 0 auto;
+  object-fit: scale-down;
+  position: relative;
+  top: -18%;
+  z-index: 1;
+  width: 85%;
+}
+
+.header-des {
+  border-radius: 150px 10px 5px;
+  width: 35%;
+  height: 0;
+  padding-top: 35%;
+}
+
+.contact-t-des {
+  position: relative;
+  left: 65%;
+  top: 130px;
+  margin-top: -130px;
+  transform: scaleX(-1);
+}
+
+.contact-b-des {
+  position: relative;
+  top: -130px;
+  margin-bottom: -130px;
+  transform: scaleX(-1) rotate(180deg);
+}
+
+.contact-icon {
+  color: var(--main-font-color);
+  font-size: 35px;
+  padding: 10px 10px 10px 0;
 }
 
 /* ---------- Work Inquiry ---------- */
