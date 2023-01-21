@@ -26,14 +26,14 @@
 
 <body>
   <!---------- Navbar ---------->
-  <nav class="navbar navbar-expand-md navbar-color">
-    <div class="container-fluid navbar-container">
+  <nav class="navbar navbar-expand-md bg-transparent">
+    <div class="container-fluid mx-4 my-3">
       <a class="navbar-brand" href="/">Samin Pashaei</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/about.html">About</a>
@@ -45,19 +45,18 @@
   </nav>
 
   <div class="main-container">
-    <div class="row flex-row-reverse">
-      <div class="col-md-6 d-flex  align-items-center margin-b">
-        <div>
-          <div class="header-des contact-t-des"></div>
-          <img src="/media/contact-me.png" alt="A Coding Girl" class="header-img" />
-          <div class="header-des contact-b-des"></div>
-        </div>
+    <!---------- Contact Header ---------->
+    <div class="row flex-row-reverse align-items-center margin-b">
+      <div class="col-md-6">
+        <div class="tr-header-des"></div>
+        <img src="/media/contact-me.png" alt="A Coding Girl" class="header-img" />
+        <div class="bl-header-des"></div>
       </div>
 
-      <div class="col-md-6 margin-b">
+      <div class="col-md-6">
         <h1 class="page-main-heading mb-5">
           Contact
-
+          <br />
           <span class="important-heading-2">Me</span>
         </h1>
 
@@ -102,6 +101,7 @@
     </div>
   </div>
 
+  <script src="/js/app.js"></script>
 </body>
 
 </html>

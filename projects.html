@@ -26,14 +26,14 @@
 
 <body>
   <!---------- Navbar ---------->
-  <nav class="navbar navbar-expand-md navbar-color">
-    <div class="container-fluid navbar-container">
+  <nav class="navbar navbar-expand-md bg-transparent">
+    <div class="container-fluid mx-4 my-3">
       <a class="navbar-brand" href="/">Samin Pashaei</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="/">Home</a>
           <a class="nav-link" href="/about.html">About</a>
@@ -45,13 +45,11 @@
   </nav>
 
   <div class="main-container">
-    <!---------- About Header ---------->
-    <div class="d-flex">
-      <div class="margin-b">
-        <div class="header-des project-t-des"></div>
-        <img src="/media/projects.png" alt="A Coding Girl" class="header-img" />
-        <div class="header-des project-b-des"></div>
-      </div>
+    <!---------- Project Header ---------->
+    <div class="full-header-des margin-b">
+      <div class="tl-header-des"></div>
+      <img src="/media/projects.png" alt="A Coding Girl" class="header-img" />
+      <div class="br-header-des"></div>
     </div>
 
     <div class="content-container">
@@ -79,6 +77,7 @@
               <h3 class="project-card-sub-heading">The Feline Foundation</h3>
 
               <a href="" class="btn bordered-btn project-btn">
+                <i class="fa-solid fa-link"></i>
                 Launch Project
               </a>
             </div>
