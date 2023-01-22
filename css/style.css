@@ -294,6 +294,13 @@ body {
   font-size: 22px;
 }
 
+/* ---------- Contact Content ---------- */
+.contact-icon {
+  color: var(--main-font-color);
+  font-size: 30px;
+  padding-right: 10px;
+}
+
 /* ---------- Work Inquiry ---------- */
 .inquiry-container {
   background-color: var(--secondary-op-color);
@@ -390,12 +397,7 @@ body {
   top: -200px;
 }
 
-/* ---------- Contact Content ---------- */
-.contact-icon {
-  color: var(--main-font-color);
-  font-size: 35px;
-  padding: 10px 10px 10px 0;
-}
+
 
 /* ---------- Responsive ---------- */
 @media (width >= 768px) {
