@@ -266,6 +266,34 @@ body {
   content: "0" counter(count);
 }
 
+/* ---------- Achievements Content ---------- */
+.achieve-card {
+  background-color: var(--primary-op-color);
+  border: none;
+}
+
+.achieve-card-img-container {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 160px;
+  padding: 16px;
+}
+
+.achieve-card-img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.achieve-card-year {
+  color: var(--sub-font-color);
+}
+
+.achieve-card-text {
+  font-size: 22px;
+}
+
 /* ---------- Work Inquiry ---------- */
 .inquiry-container {
   background-color: var(--secondary-op-color);
@@ -300,40 +328,7 @@ body {
   color: var(--secondary-color);
 }
 
-/* ---------- Achievements Content ---------- */
-.achieve-card {
-  background-color: var(--primary-op-color);
-  border: none;
-  overflow: auto;
-}
 
-.achieve-card-img-container {
-  min-height: 40%;
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 16px;
-}
-
-.achieve-card-img {
-  max-width: 70%;
-  max-height: 70%;
-}
-
-.achieve-card-body {
-  text-align: center;
-}
-
-.achieve-card-year {
-  color: var(--sub-font-color);
-}
-
-.achieve-card-text {
-  text-align: center;
-  margin-bottom: 0;
-  font-size: 22px;
-}
 
 /* ---------- Projects Content ---------- */
 .project-row {
@@ -401,8 +396,6 @@ body {
   font-size: 35px;
   padding: 10px 10px 10px 0;
 }
-
-
 
 /* ---------- Responsive ---------- */
 @media (width >= 768px) {
