@@ -26,9 +26,14 @@
 
 <body>
   <!---------- Navbar ---------->
-  <nav class="navbar navbar-expand-md bg-transparent">
-    <div class="container-fluid mx-4 my-3">
-      <a class="navbar-brand" href="/">Samin Pashaei</a>
+  <nav class="navbar sticky-top navbar-expand-md navbar-bg mb-3">
+    <div class="container-fluid mx-4 mt-1">
+      <a class="navbar-brand p-0" href="/">
+        <img src="/media/logo.png" alt="Logo" class="sp-logo">
+        <span class="logo-name">
+          <span class="important-heading-1">S</span>amin <span class="important-heading-1">P</span>ashaei</span>
+        </span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -48,9 +53,11 @@
     <!---------- Home Header ---------->
     <div class="row flex-row-reverse align-items-center margin-b">
       <div class="col-md-6">
-        <div class="tl-header-des"></div>
-        <img src="/media/home.png" alt="A Coding Girl" class="header-img" />
-        <div class="br-header-des"></div>
+        <div>
+          <div class="tl-header-des"></div>
+          <img src="/media/home.png" alt="A Coding Girl" class="header-img" />
+          <div class="br-header-des"></div>
+        </div>
       </div>
 
       <div class="col-md-6">
@@ -63,11 +70,11 @@
         </h1>
 
         <h2 class="page-sub-heading mb-5">
-          I am a front-end developer based in Iran.
+          Front-end developer who writes clean, elegant and efficient code.
         </h2>
 
-        <a href="/projects.html" class="btn filled-btn m-2">
-          <div class="btn-txt">My Works</div>
+        <a href="/about.html" class="btn filled-btn m-2">
+          <div class="btn-txt">About Me</div>
         </a>
         <a href="/contact.html" class="btn bordered-btn m-2">
           <div class="btn-txt">Contact Me</div>
