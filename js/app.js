@@ -33,5 +33,49 @@ function setAchieveHeight() {
   }
 }
 
+function changePopupTxt(index) {
+  navigator.clipboard.readText().then(function (text) {
+    if (index === 0) {
+      if (text !== "Saadat Abad, Tehran, Iran") {
+        hoverPopupTxt[0].textContent = "Click to copy";
+      } else {
+        hoverPopupTxt[0].textContent = "Copied";
+      }
+    } else if (index === 1) {
+      if (text !== "saminpashaei96@gmail.com") {
+        hoverPopupTxt[1].textContent = "Click to copy";
+      } else {
+        hoverPopupTxt[1].textContent = "Copied";
+      }
+    } else {
+      if (text !== "+989912920904") {
+        hoverPopupTxt[2].textContent = "Click to copy";
+      } else {
+        hoverPopupTxt[2].textContent = "Copied";
+      }
+    }
+  });
+}
+
+function copyPopup(data) {
+  navigator.clipboard.writeText(data);
+
+  if (data === "Saadat Abad, Tehran, Iran") {
+    hoverPopupTxt[0].textContent = "Copied";
+  } else if (data === "saminpashaei96@gmail.com") {
+    hoverPopupTxt[1].textContent = "Copied";
+  } else {
+    hoverPopupTxt[2].textContent = "Copied";
+  }
+}
+
 setAchieveHeight();
 window.onresize = setAchieveHeight;
+
+let hoverPopupTxt = document.querySelectorAll(".hover-popup-txt");
+let contactTxt = document.querySelectorAll(".contact-txt");
+for (let index = 0; index < 3; index++) {
+  contactTxt[index].addEventListener("mouseenter", function () {
+    changePopupTxt(index);
+  });
+}

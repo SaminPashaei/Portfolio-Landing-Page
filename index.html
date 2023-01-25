@@ -26,8 +26,8 @@
 
 <body>
   <!---------- Navbar ---------->
-  <nav class="navbar sticky-top navbar-expand-md navbar-bg mb-3">
-    <div class="container-fluid mx-4 mt-1">
+  <nav class="navbar sticky-top navbar-expand-md navbar-bg mb-4">
+    <div class="container-fluid navbar-container">
       <a class="navbar-brand p-0" href="/">
         <img src="/media/logo.png" alt="Logo" class="sp-logo">
         <span class="logo-name">
@@ -52,12 +52,14 @@
   <div class="main-container">
     <!---------- Home Header ---------->
     <div class="row flex-row-reverse align-items-center margin-b">
-      <div class="col-md-6">
-        <div>
+      <div class="col-md-6 margin-md">
+        <span class="position-relative">
           <div class="tl-header-des"></div>
-          <img src="/media/home.png" alt="A Coding Girl" class="header-img" />
+          <div class="d-flex justify-content-center" style="margin: 10% 0;">
+            <img src="/media/home.png" alt="A Coding Girl" class="header-img home-header-img" />
+          </div>
           <div class="br-header-des"></div>
-        </div>
+        </span>
       </div>
 
       <div class="col-md-6">
@@ -69,7 +71,7 @@
           Samin <span class="important-heading-1">Pashaei</span>.
         </h1>
 
-        <h2 class="page-sub-heading mb-5">
+        <h2 class="page-sub-heading mb-4">
           Front-end developer who writes clean, elegant and efficient code.
         </h2>
 
@@ -86,7 +88,7 @@
     <div class="content-container">
       <!---------- Choose Header ---------->
       <div class="row flex-row-reverse align-items-center mb-5">
-        <div class="col-md-6">
+        <div class="col-md-6 margin-md">
           <h2 class="main-heading">
             Why Choose <span class="important-heading-1">Me</span>?
           </h2>
@@ -101,9 +103,16 @@
 
       <!---------- Choose Content ---------->
       <div class="row align-items-center margin-b">
-        <div class="col-md-6">
-          <a href="https://jocular-selkie-44a0be.netlify.app/">
-            <div class="choose-img"></div>
+        <div class="col-md-6 margin-md">
+          <a href="https://jocular-selkie-44a0be.netlify.app/" style="text-decoration: none;">
+            <div class="choose-img">
+              <a href="" class="btn filled-btn project-btn">
+                <div class="btn-txt">
+                  <i class="fa-solid fa-link"></i>
+                  Launch Project
+                </div>
+              </a>
+            </div>
           </a>
         </div>
 
@@ -144,9 +153,15 @@
       </div>
 
       <!---------- Footer ---------->
-      <div class="text-center margin-b">
-        <hr class="footer-line mb-4" />
-        <h2 class="footer-logo mb-3">Samin Pashaei</h2>
+      <div class="text-center mb-4">
+        <hr class="footer-line" />
+
+        <div class="footer-note mb-3">
+          <img src="/media/logo.png" alt="Logo" class="sp-logo">
+          <div class="logo-name">
+            <span class="important-heading-1">S</span>amin <span class="important-heading-1">P</span>ashaei</span>
+          </div>
+        </div>
 
         <a href="https://github.com/SaminPashaei" class="footer-link"><i class="fa-brands fa-square-github"></i></a>
         <a href="https://www.linkedin.com/in/samin-pashaei-728181260" class="footer-link"><i

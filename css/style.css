@@ -31,8 +31,8 @@ body {
 .br-header-des,
 .bl-header-des {
   box-shadow: 0px 0px 20px -5px rgb(0 0 0 / 40%);
-  position: relative;
-  border-radius: 150px 10px 5px;
+  position: absolute;
+  border-radius: 70% 10px 5px;
   padding-top: 32%;
   width: 32%;
 }
@@ -54,8 +54,7 @@ body {
 }
 
 .tl-header-des {
-  margin-top: -120px;
-  top: 120px;
+  bottom: 62%;
 }
 
 .full-header-des .tl-header-des {
@@ -64,9 +63,8 @@ body {
 }
 
 .br-header-des {
-  margin-bottom: -220px;
-  top: -220px;
   left: 68%;
+  bottom: -12%;
   transform: rotate(180deg);
 }
 
@@ -90,12 +88,9 @@ body {
 }
 
 .header-img {
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  top: -50px;
   z-index: 1;
   width: 75%;
+  height: auto;
 }
 
 /* --- Heading --- */
@@ -164,7 +159,11 @@ body {
 /* ---------- Navbar ---------- */
 .navbar-bg {
   background-color: rgb(248 248 248);
-  border-bottom: 1px solid var(--primary-op-color);
+  box-shadow: 0 0 15px rgb(0 0 0 / 50%);
+}
+
+.navbar-container {
+  margin: 4px 24px 0;
 }
 
 .navbar-brand {
@@ -176,9 +175,10 @@ body {
   filter: invert(58%) sepia(17%) saturate(6292%) hue-rotate(220deg)
     brightness(97%) contrast(99%); /* black to primary color */
   width: 55px;
+  transition: all 200ms ease-in-out;
 }
 
-.sp-logo:hover {
+.navbar-brand .sp-logo:hover {
   filter: invert(98%) sepia(80%) saturate(545%) hue-rotate(81deg)
     brightness(97%) contrast(109%); /* black to secondary color */
 }
@@ -192,10 +192,15 @@ body {
 
 .logo-name .important-heading-1 {
   font-size: 33px;
+  transition: all 200ms ease-in-out;
 }
 
-.logo-name:hover .important-heading-1 {
+.navbar-brand .logo-name:hover .important-heading-1 {
   color: var(--secondary-color);
+}
+
+.navbar-toggler {
+  border: none;
 }
 
 .navbar-nav {
@@ -221,7 +226,12 @@ body {
   color: var(--primary-color);
 }
 
-/* ---------- Choose Content ---------- */
+/* ---------- Home Content ---------- */
+.home-header-img {
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 40%);
+}
+
 .choose-img {
   background: linear-gradient(
       135deg,
@@ -233,8 +243,13 @@ body {
   background-size: cover;
   border-radius: 10px 200px;
   box-shadow: 0px 0px 20px 10px rgb(0 0 0 / 20%);
-  height: 600px;
+  height: 700px;
   width: 90%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-decoration: none;
 }
 
 .choose-img:hover {
@@ -247,6 +262,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0px 0px 25px 10px rgb(0 0 0 / 30%);
+}
+
+.choose-img .project-btn {
+  margin: 30px 40px;
 }
 
 .choose-list {
@@ -295,6 +314,12 @@ body {
 .achieve-card {
   background-color: var(--primary-op-color);
   border: none;
+  box-shadow: 0px 0px 10px -1px rgb(0 0 0 / 40%);
+  transition: all 200ms ease-in-out;
+}
+
+.achieve-card:hover {
+  box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 40%);
 }
 
 .achieve-card-img-container {
@@ -307,12 +332,17 @@ body {
 }
 
 .achieve-card-img {
-  max-height: 100%;
-  max-width: 100%;
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.achieve-card-title {
+  font-size: 28px;
 }
 
 .achieve-card-year {
   color: var(--sub-font-color);
+  font-size: 16px;
 }
 
 .achieve-card-text {
@@ -385,15 +415,23 @@ body {
 }
 
 .project-btn {
-  margin: 0 auto -64.5px;
   opacity: 0;
-  position: relative;
-  top: -150px;
   transition: all 350ms ease-in-out;
 }
 
-.project-card:hover .project-btn {
+.project-card .project-btn {
+  position: relative;
+  margin: 0 auto -64.5px;
+  top: -150px;
+}
+
+.project-card:hover .project-btn,
+.choose-img:hover .project-btn {
   opacity: 1;
+}
+
+.project-btn .btn-txt {
+  width: 210px;
 }
 
 /* ---------- Contact Content ---------- */
@@ -401,6 +439,43 @@ body {
   color: var(--main-font-color);
   font-size: 30px;
   padding-right: 10px;
+}
+
+.contact-txt {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.contact-txt .hover-popup-txt {
+  opacity: 0;
+  background-color: rgb(0 0 0 / 50%);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 0;
+  position: absolute;
+  z-index: 1;
+  width: 140px;
+  left: 50%;
+  top: 110%;
+  font-size: 18px;
+  margin-left: -70px;
+}
+
+.contact-txt .hover-popup-txt::after {
+  content: "";
+  position: absolute;
+  top: -49%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent rgb(0 0 0 / 50%) transparent;
+}
+
+.contact-txt:hover .hover-popup-txt {
+  opacity: 1;
 }
 
 /* ---------- Work Inquiry ---------- */
@@ -438,7 +513,7 @@ body {
 }
 
 /* ---------- Responsive ---------- */
-@media (1024px <= width < 1230px) {
+/* @media (1024px < width <= 1230px) {
   .tl-header-des {
     margin-top: -80px;
     top: 80px;
@@ -448,8 +523,8 @@ body {
     top: -180px;
   }
   .full-header-des .br-header-des {
-    margin-bottom: -190px;
-    top: -190px;
+    margin-bottom: -150px;
+    top: -150px;
   }
   .tr-header-des {
     margin-top: -80px;
@@ -460,17 +535,96 @@ body {
     top: -180px;
   }
   .full-header-des .header-img {
-    top: 0;
+    top: 20px;
+  }
+  .page-main-heading {
+    font-size: 54px;
+  }
+  .page-sub-heading {
+    font-size: 25px;
+  }
+  .main-heading {
+    font-size: 40px;
+  }
+  .sub-heading {
+    font-size: 20px;
+  }
+  .filled-btn,
+  .bordered-btn {
+    font-size: 20px;
+    padding: 13px 28px;
+  }
+  .choose-list li {
+    font-size: 18px;
+  }
+  .achieve-card-title {
+    font-size: 21px;
+  }
+  .achieve-card-year {
+    font-size: 14px;
+  }
+  .achieve-card-text {
+    font-size: 19px;
+  }
+  .project-card-main-heading {
+    font-size: 35px;
+  }
+  .project-card-sub-heading {
+    font-size: 25px;
+  }
+  .project-btn {
+    margin-bottom: -57.5px;
+  }
+  .footer-note .sp-logo {
+    width: 45px;
   }
 }
 
-@media (width >= 768px) {
-  .navbar-expand-md .navbar-nav .nav-link {
-    padding-left: 16px;
-    padding-right: 16px;
+@media (575px <= width < 768px) {
+  .full-header-des .br-header-des {
+    margin-bottom: -10px;
+    top: -10px;
   }
-  .navbar-expand-md .navbar-nav .last-nav-link {
-    padding-right: 0;
+  .full-header-des .header-img {
+    top: 90px;
+  }
+}
+
+@media (width < 575px) {
+  .full-header-des .br-header-des {
+    margin-bottom: 90px;
+    top: 90px;
+  }
+  .full-header-des .header-img {
+    top: 140px;
+  }
+  .project-card-main-heading {
+    font-size: 18px;
+  }
+  .project-card-sub-heading {
+    font-size: 11px;
+  }
+  .project-btn {
+    margin-bottom: -78.5px;
+  }
+}
+
+@media (768px <= width < 1024px) {
+  .full-header-des .br-header-des {
+    margin-bottom: -90px;
+    top: -90px;
+  }
+  .full-header-des .header-img {
+    top: 50px;
+  }
+  .project-card-main-heading {
+    font-size: 25px;
+  }
+  .project-card-sub-heading {
+    font-size: 16px;
+  }
+  .project-btn {
+    margin-bottom: -53px;
   }
 }
 
@@ -479,18 +633,11 @@ body {
     margin-top: -30px;
     top: 30px;
   }
-  .full-header-des .tl-header-des {
-    margin-top: -170px;
-    top: 170px;
-  }
   .br-header-des {
     margin-bottom: -130px;
     top: -130px;
   }
-  .full-header-des .br-header-des {
-    margin-bottom: -50px;
-    top: -50px;
-  }
+
   .tr-header-des {
     margin-top: -30px;
     top: 30px;
@@ -498,9 +645,6 @@ body {
   .bl-header-des {
     margin-bottom: -130px;
     top: -130px;
-  }
-  .full-header-des .header-img {
-    top: 60px;
   }
 
   .margin-b {
@@ -515,9 +659,9 @@ body {
   .filled-btn,
   .bordered-btn {
     padding: 13px 30px;
+    font-size: 17px;
   }
   .btn-txt {
-    font-size: 17px;
     width: 110px;
   }
   .content-container {
@@ -527,10 +671,10 @@ body {
     font-size: 35px;
   }
   .sub-heading {
-    font-size: 21px;
+    font-size: 18px;
   }
   .choose-list {
-    font-size: 18px;
+    font-size: 16px;
   }
   .choose-list li::before {
     font-size: 45px;
@@ -539,14 +683,56 @@ body {
     height: 55px;
     width: 55px;
   }
-}
+  .footer-note .sp-logo {
+    width: 45px;
+  }
 
-@media (width < 768px) {
-  .navbar-brand {
+  .sp-logo {
+    width: 40px;
+  }
+  .logo-name {
     font-size: 20px;
   }
   .navbar-nav {
-    font-size: 15px;
+    font-size: 18px;
+  }
+  .logo-name .important-heading-1 {
+    font-size: 26px;
+  }
+
+  .achieve-card-title {
+    font-size: 18px;
+  }
+  .achieve-card-year {
+    font-size: 12px;
+  }
+  .achieve-card-text {
+    font-size: 16px;
+  }
+}
+
+@media (width >= 768px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .navbar-expand-md .navbar-nav .last-nav-link {
+    padding-right: 0;
+  }
+}
+
+@media (width < 768px) {
+  .sp-logo {
+    width: 40px;
+  }
+  .logo-name {
+    font-size: 20px;
+  }
+  .navbar-nav {
+    font-size: 18px;
+  }
+  .logo-name .important-heading-1 {
+    font-size: 26px;
   }
   .navbar-nav .nav-link.active::after {
     content: none;
@@ -554,8 +740,36 @@ body {
   .main-container {
     text-align: center;
   }
-  /* .footer-logo,
-  .footer-link {
-    font-size: 25px;
-  } */
+  .margin-md {
+    margin-bottom: 2rem;
+  }
+  .choose-img {
+    margin: 0 auto 10px;
+  }
+  .navbar-container {
+    margin: 4px 5px 0;
+  }
+} */
+
+@media (width < 768px) {
+  .navbar-nav .nav-link.active::after {
+    content: none;
+  }
 }
+
+@media (width >= 768px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .navbar-expand-md .navbar-nav .last-nav-link {
+    padding-right: 0;
+  }
+}
+
+
+
+
+
+
+
